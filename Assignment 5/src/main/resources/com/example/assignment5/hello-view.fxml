@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.assignment5.Controller">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <HBox spacing="10">
+        <Label text="Product ID:"/>
+        <TextField fx:id="productIdField"/>
+        <Label text="Product Name:"/>
+        <TextField fx:id="productNameField"/>
+        <Label text="Product Company:"/>
+        <TextField fx:id="productCompanyField"/>
+        <Label text="Product Price:"/>
+        <TextField fx:id="productPriceField"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Insert" onAction="#insertProduct"/>
+        <Button text="Update" onAction="#updateProduct"/>
+        <Button text="Delete" onAction="#deleteProduct"/>
+        <Button text="Display" onAction="#displayProducts"/>
+    </HBox>
+
+    <TableView fx:id="productTableView">
+        <columns>
+            <TableColumn text="ID" fx:id="idColumn"/>
+            <TableColumn text="Name" fx:id="nameColumn"/>
+            <TableColumn text="Company" fx:id="companyColumn"/>
+            <TableColumn text="Price" fx:id="priceColumn"/>
+        </columns>
+    </TableView>
+</VBox>
